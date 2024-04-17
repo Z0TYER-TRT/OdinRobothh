@@ -13,7 +13,7 @@ from tg_bot import dispatcher
 
 
 BTN_LINK_REGEX = re.compile(
-        r"(?<!\\)\[(.+?)\]\(((?!b(?:utto|t)nurl:).+?)\)|(?m)^(\n?\[(.+?)\]\(b(?:utto|t)nurl:(?:/*)?(.+?)(:same)?\))$"
+        r"(?m)(?<!\\)\[(.+?)\]\(((?!b(?:utto|t)nurl:).+?)\)|^(\n?\[(.+?)\]\(b(?:utto|t)nurl:(?:/*)?(.+?)(:same)?\))$"
 )
 
 
