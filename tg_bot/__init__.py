@@ -5,6 +5,7 @@ import time
 from typing import List
 import spamwatch
 import telegram.ext as tg
+import configparser
 from telegram.ext import Dispatcher, JobQueue, Updater
 from telethon import TelegramClient
 from telethon.sessions import MemorySession
@@ -24,7 +25,11 @@ def get_user_list(key):
     royals = nation_sql.get_royals(key)
     return [a.user_id for a in royals]
 
-print("Available sections:", parser.sections())
+
+parser = configparser.ConfigParser()
+parser.read("config.ini")  # Make sure the correct config file is loaded
+
+print("Available sections:", parser.sections())  # This should now work
 # setup loggers
 
 
