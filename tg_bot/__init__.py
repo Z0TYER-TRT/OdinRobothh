@@ -24,6 +24,7 @@ def get_user_list(key):
     royals = nation_sql.get_royals(key)
     return [a.user_id for a in royals]
 
+print("Available sections:", parser.sections())
 # setup loggers
 
 
